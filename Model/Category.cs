@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Microservice.NET.Core.Model
+﻿namespace Microservice.NET.Core.Model
 {
     public class Category
     {
