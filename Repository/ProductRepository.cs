@@ -14,35 +14,38 @@ namespace Microservice.NET.Core.Repository
         {
             _dbContext = dbContext;
         }
-
         public void DeleteProduct(int productId)
         {
-            throw new System.NotImplementedException();
+            var product = _dbContext.Products.Find(productId);
+            _dbContext.Products.Remove(product);
+            Save();
         }
 
         public Product GetProductByID(int productId)
         {
-            throw new System.NotImplementedException();
+            return _dbContext.Products.Find(productId);
         }
 
         public IEnumerable<Product> GetProducts()
         {
-            throw new System.NotImplementedException();
+            return _dbContext.Products.ToList();
         }
 
         public void InsertProduct(Product product)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Add(product);
+            Save();
         }
 
         public void Save()
         {
-            throw new System.NotImplementedException();
+            _dbContext.SaveChanges();
         }
 
         public void UpdateProduct(Product product)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Entry(product).State = EntityState.Modified;
+            Save();
         }
     }
 }  
