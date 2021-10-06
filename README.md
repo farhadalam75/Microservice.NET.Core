@@ -30,3 +30,5 @@ Containers like Dockers and others slice the operating system resources, for e.g
 ### Monolithic vs Microservices Architecture
 _Monolithic applications_ are more of a single complete package having all the related needed components and services encapsulated in one package.
 _Microservice_ is an approach to create small services each running in their own space and can communicate via messaging. These are independent services directly calling their own database.
+
+copied from [C# Corner](https://www.c-sharpcorner.com/article/microservice-using-asp-net-core/)
