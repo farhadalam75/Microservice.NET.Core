@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Microservice.NET.Core.Repository
 {
-    internal interface IProductRepository
+    public interface IProductRepository
     {
         void DeleteProduct(int productId);
         Product GetProductByID(int productId);
